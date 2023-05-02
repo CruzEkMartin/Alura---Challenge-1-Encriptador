@@ -1,0 +1,56 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: rgb(192, 192, 192);
+}
+
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+main{
+    width: 940px;
+    margin: 0 auto;
+    height: 600px;
+    background: #F3F5FC;
+    
+}
+
+.seccion-mensaje{
+    background: #F3F5FC;
+    float: left;
+    width: 70%;
+    text-align: center;
+}
+
+.texto{
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: none;
+    background: none;
+    color: darkblue;
+    font-size:2em;
+}
+
+.aviso p:before{
+    content:"🛈"
+}
+
+.aviso p{
+    color: gray;
+}
+
+.seccion-resultado{
+    background: #ffffff;
+    float: right;
+    width: 30%;
+    margin: 0 auto;
+    height: auto;
+}

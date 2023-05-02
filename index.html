@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Challenge ONE Sprint 01 - Encriptador JS</title>
+</head>
+
+<body>
+    <header>
+        <h1>Challenge ONE Sprint 01 - Encriptador JS</h1>
+    </header>
+
+    <main class="main">
+
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+
+        <section class="seccion-mensaje">
+
+            <div class="mensaje">
+                <textarea class="texto" name="texto" id="texto" cols="1" rows="2"
+                    placeholder="Ingrese el texto aqui"></textarea>
+            </div>
+
+            <div class="aviso">
+                <p>Solo letras minúsculas y sin acentos</p>
+            </div>
+
+            <div class="botones">
+                <input value="Encriptar" class="boton" type="button" id="encriptar" onclick="encriptar()">
+                <input value="Desencriptar" class="boton" type="button" id="desencriptar" onclick="desencriptar()">
+            </div>
+
+        </section>
+
+        <section class="seccion-resultado">
+            <img src="img/Munieco.png" alt="" id="munieco">
+            <div class="resultado">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                <textarea class="salida" name="salida" id="salida" cols="1" rows="2"></textarea>
+            </div>
+            <div class="boton-copiar">
+                <input value="Copiar" class="boton" type="button" id="copiar">
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+</body>
+
+</html>
