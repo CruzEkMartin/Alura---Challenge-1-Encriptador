@@ -14,29 +14,59 @@ header {
 
 
 main{
-    width: 940px;
+    width: 100%;
+    height: 80vh;
     margin: 0 auto;
-    height: 600px;
     background: #F3F5FC;
-    
+    position: relative;
+}
+
+.logo{
+    margin: 30px 50px;
 }
 
 .seccion-mensaje{
+   position: absolute;
     background: #F3F5FC;
     float: left;
     width: 70%;
     text-align: center;
 }
 
-.texto{
+/* .mensaje{
     display: block;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    height: 60%;
+} */
+
+.texto{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
     border: none;
-    background: none;
-    color: darkblue;
-    font-size:2em;
+    background:  #F3F5FC;;
+    color:#0A3871;;
+    font-size: 32px;
+    font-family: "Inter";
+    line-height: 150%;
+}
+
+.texto::placeholder{
+    font-family: "Inter";
+    color:#0A3871;;
+}
+
+.texto:focus, .texto:active{
+    border: none;
+    outline: none;
+}
+
+.aviso{    
+    /* position: absolute; */
+    float: left;
+    margin-top: 30px;
+    margin-left: 20%;
+    margin-bottom: 10px;
+    top: 80%;
 }
 
 .aviso p:before{
@@ -45,6 +75,41 @@ main{
 
 .aviso p{
     color: gray;
+    font-family: "Inter";
+    font-size: 12px;
+    line-height: 150%;
+}
+
+.botones{
+    /* position: absolute; */
+    float: left;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    top: 85%;
+}
+
+.boton-encriptar{
+    width: 48%;
+    margin-right: 24px;
+    padding: 24px;
+    border: 1px solid;
+    background-color: #0A3871;
+    border-radius: 24px;
+    font-family: "Inter";
+    font-size: 16px;
+    color: white;
+}
+
+.boton-desencriptar{
+    width: 48%;
+    padding: 24px;
+    border: 1px solid;
+    background-color: #D6DDE6;
+    border-radius: 24px;
+    font-family: "Inter";
+    font-size: 16px;
+    color: #0A3871;
 }
 
 .seccion-resultado{
