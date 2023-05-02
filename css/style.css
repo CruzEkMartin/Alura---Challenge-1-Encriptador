@@ -1,121 +1,105 @@
-body{
-    margin: 0px;
-    padding: 0px;
-    background: rgb(192, 192, 192);
-}
-
-header {
-    background-color: #BBBBBB;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-}
-
-
-main{
-    width: 100%;
-    height: 80vh;
-    margin: 0 auto;
+*{
     background: #F3F5FC;
-    position: relative;
-}
-
-.logo{
-    margin: 30px 50px;
-}
-
-.seccion-mensaje{
-   position: absolute;
-    background: #F3F5FC;
-    float: left;
-    width: 70%;
-    text-align: center;
-}
-
-/* .mensaje{
-    display: block;
-    height: 60%;
-} */
-
-.texto{
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
-    border: none;
-    background:  #F3F5FC;;
-    color:#0A3871;;
+    font-family: 'Inter';
+    font-weight: 400;
     font-size: 32px;
-    font-family: "Inter";
     line-height: 150%;
 }
 
-.texto::placeholder{
-    font-family: "Inter";
-    color:#0A3871;;
+.logo {
+    padding-top: 30px;
+    margin-left: 50px;
+    width: 2%;
 }
 
-.texto:focus, .texto:active{
+main {
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+
+.texto {
+    border: none;
+    color: #0A3871;
+    margin-top: 30px;
+    text-transform: lowercase;
+}
+
+.texto::placeholder {
+    color: #0A3871;
+}
+
+.texto:focus,
+.texto:active {
     border: none;
     outline: none;
 }
 
-.aviso{    
-    /* position: absolute; */
-    float: left;
-    margin-top: 30px;
-    margin-left: 20%;
-    margin-bottom: 10px;
-    top: 80%;
+ .aviso{
+    color: #495057;
+    font-size: 18px;
 }
 
-.aviso p:before{
-    content:"🛈"
+.aviso:before {
+    content: "🛈"
 }
 
-.aviso p{
-    color: gray;
-    font-family: "Inter";
-    font-size: 12px;
-    line-height: 150%;
+.botones {
+    display: flex;
+    margin-top: 18px;
 }
 
-.botones{
-    /* position: absolute; */
-    float: left;
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
-    top: 85%;
-}
-
-.boton-encriptar{
-    width: 48%;
-    margin-right: 24px;
-    padding: 24px;
-    border: 1px solid;
+.boton-encriptar {
+    width: 328px;
+    height: 67px;
+    border: 1px solid #0A3871;
     background-color: #0A3871;
     border-radius: 24px;
-    font-family: "Inter";
-    font-size: 16px;
     color: white;
+    cursor: pointer;
 }
 
-.boton-desencriptar{
-    width: 48%;
-    padding: 24px;
-    border: 1px solid;
+.boton-desencriptar {
+    width: 328px;
+    height: 67px;
+    border: 1px solid #0A3871;
     background-color: #D6DDE6;
     border-radius: 24px;
-    font-family: "Inter";
-    font-size: 16px;
     color: #0A3871;
+    margin-left: 30px;
+    cursor: pointer;
 }
 
-.seccion-resultado{
+.seccion-resultado {
     background: #ffffff;
-    float: right;
-    width: 30%;
-    margin: 0 auto;
-    height: auto;
+    background-image: url("/img/Munieco.png");
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 24px;
+    color: #0A3871;
+    /* margin-left: 98px; */
+    margin-top: 20px;
+    padding-left: 20px;
+    /* position: fixed; */
+}
+
+.salida{
+background: none;
+border: none;
+}
+
+.salida:focus {
+    outline: none;
+}
+
+.boton-copiar{
+    width: 336px;
+    height: 67px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    margin-left: 108px;
+    margin-top: 402px;
+    position: absolute;
 }
