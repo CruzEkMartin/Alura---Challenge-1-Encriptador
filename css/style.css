@@ -1,4 +1,4 @@
-*{
+* {
     background: #F3F5FC;
     font-family: 'Inter';
     font-weight: 400;
@@ -14,8 +14,15 @@
 
 main {
     display: flex;
+    justify-content: center;
     margin-bottom: 50px;
     margin-left: 80px;
+    width: 90%;
+    height: 80vh;
+}
+
+.seccion-mensaje {
+    width: 60%;
 }
 
 .texto {
@@ -23,6 +30,7 @@ main {
     color: #0A3871;
     margin-top: 30px;
     text-transform: lowercase;
+    width: 70%;
 }
 
 .texto::placeholder {
@@ -35,9 +43,10 @@ main {
     outline: none;
 }
 
- .aviso{
+.aviso {
     color: #495057;
     font-size: 18px;
+    margin-top: 30%;
 }
 
 .aviso:before {
@@ -71,35 +80,81 @@ main {
 }
 
 .seccion-resultado {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    top: 5%;
+    box-shadow: 0px 24px 32px -8px rgb(0, 0, 0, 0.08);
+    border-radius: 32px;
     background: #ffffff;
-    background-image: url("/img/Munieco.png");
-    background-repeat: no-repeat;
-    border: none;
-    border-radius: 24px;
-    color: #0A3871;
-    /* margin-left: 98px; */
-    margin-top: 20px;
     padding-left: 20px;
-    /* position: fixed; */
+    position: relative;
+    vertical-align: middle;
+    align-items: center;
+    border: none;
 }
 
-.salida{
-background: none;
-border: none;
+
+.mensaje-salida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    text-align: center;
+    background: none;
+}
+
+
+.seccion-resultado img {
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top: 15%;
+    background: none;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.seccion-resultado h2 {
+    width: 60%;
+    background: none;
+    text-align: center;
+    color: black;
+    line-height: 110%;
+}
+
+.seccion-resultado p {
+    width: 60%;
+    background: none;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    line-height: 150%;
+    padding-top: 10px;
+}
+
+.salida {
+    background: none;
+    border: none;
 }
 
 .salida:focus {
     outline: none;
 }
 
-.boton-copiar{
+.boton-copiar {
     width: 336px;
     height: 67px;
     border: 1px solid #0A3871;
     border-radius: 24px;
     color: #0A3871;
     cursor: pointer;
-    margin-left: 108px;
-    margin-top: 402px;
-    position: absolute;
+    top: 95%;
+    margin-top: 30px;
 }
