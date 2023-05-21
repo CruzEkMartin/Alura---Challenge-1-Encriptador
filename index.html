@@ -39,14 +39,19 @@
         </section>
 
         <section class="seccion-resultado">
-            <img src="img/Munieco.png" alt="" id="munieco">
-            <div class="mensaje-salida" id="mensaje-salida">
-                <h2>Ningún mensaje fue encontrado</h2>
-                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-                <textarea class="salida" name="salida" id="salida" cols="20" rows="7"></textarea>
+            <div class="mensaje" id="mensaje">
+                <img src="img/Munieco.png" alt="" id="munieco">
+                <div class="mensaje-salida" id="mensaje-salida">
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
 
+            <div class="encriptado" id="encriptado">
+                <textarea class="salida" name="salida" id="salida" cols="20" rows="7"></textarea>
                 <input value="Copiar" class="boton-copiar" type="button" id="copiar">
             </div>
+
         </section>
     </main>
 
@@ -55,6 +60,11 @@
 
     <script>
 
+        window.onload = function () {
+            //document.getElementById("mensaje").style.display = 'block';
+            document.getElementById("encriptado").style.display = 'none';
+        }
+
         function encriptar() {
 
             //Obtenemos lo que está escrito en el textarea de seccion-mensaje
@@ -62,16 +72,21 @@
             let salida = document.getElementById("salida");
             let encriptado = "";
 
+            //sustuimos los valores
             if (texto.length != 0) {
                 encriptado = texto
-                .replace(/e/gi, "enter")
-                .replace(/i/gi, "imes")
-                .replace(/a/gi, "ai")
-                .replace(/o/gi, "ober")
-                .replace(/u/gi, "ufat");
+                    .replace(/e/gi, "enter")
+                    .replace(/i/gi, "imes")
+                    .replace(/a/gi, "ai")
+                    .replace(/o/gi, "ober")
+                    .replace(/u/gi, "ufat");
 
+                //enviamos el resultado
                 salida.value = encriptado;
-                alert(encriptado);
+                document.getElementById("mensaje").style.display = 'none';
+                document.getElementById("encriptado").style.display = 'block';
+                //lo mostramos en el textarea correspondiente
+
             }
             else {
                 alert("Debes ingresar un texto");
@@ -79,18 +94,18 @@
 
         }
 
-        function desencriptar(){
+        function desencriptar() {
             let salida = document.getElementById("salida").value;
             let texto = document.getElementById("texto");
-            let desencriptado="";
+            let desencriptado = "";
 
             if (salida.length != 0) {
                 desencriptado = salida
-                .replace(/enter/gi, "e")
-                .replace(/imes/gi, "i")
-                .replace(/ai/gi, "a")
-                .replace(/ober/gi, "o")
-                .replace(/ufat/gi, "u");
+                    .replace(/enter/gi, "e")
+                    .replace(/imes/gi, "i")
+                    .replace(/ai/gi, "a")
+                    .replace(/ober/gi, "o")
+                    .replace(/ufat/gi, "u");
 
                 texto.value = desencriptado;
                 alert(desencriptado);
@@ -100,6 +115,7 @@
             }
 
         }
+
 
     </script>
 </body>
