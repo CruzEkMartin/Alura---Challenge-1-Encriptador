@@ -49,7 +49,7 @@
 
             <div class="encriptado" id="encriptado">
                 <textarea class="salida" name="salida" id="salida" cols="20" rows="7"></textarea>
-                <input value="Copiar" class="boton-copiar" type="button" id="copiar">
+                <input value="Copiar" class="boton-copiar" type="button" id="copiar" onclick="portapapeles()">
             </div>
 
         </section>
@@ -60,19 +60,26 @@
 
     <script>
 
+        //al inicio ocultamos el cuadro para el texto encriptado
         window.onload = function () {
-            //document.getElementById("mensaje").style.display = 'block';
             document.getElementById("encriptado").style.display = 'none';
         }
 
-        function encriptar() {
+        //solo minúsculas y sin acento
+        document.getElementById("texto").addEventListener("keypress", verificar);
+        function verificar(e) {
+            if (e.key.match(/[a-zñ\s]/i) === null) {
+                e.preventDefault();
+            }
+        }
 
+        function encriptar() {
             //Obtenemos lo que está escrito en el textarea de seccion-mensaje
             let texto = document.getElementById("texto").value;
             let salida = document.getElementById("salida");
             let encriptado = "";
 
-            //sustuimos los valores
+            //sustuimos los valores para encriptar
             if (texto.length != 0) {
                 encriptado = texto
                     .replace(/e/gi, "enter")
@@ -83,37 +90,45 @@
 
                 //enviamos el resultado
                 salida.value = encriptado;
+                //lo mostramos en el textarea correspondiente
                 document.getElementById("mensaje").style.display = 'none';
                 document.getElementById("encriptado").style.display = 'block';
-                //lo mostramos en el textarea correspondiente
-
             }
             else {
                 alert("Debes ingresar un texto");
             }
-
         }
 
         function desencriptar() {
-            let salida = document.getElementById("salida").value;
-            let texto = document.getElementById("texto");
+            //Obtenemos lo que está escrito en el textarea de seccion-mensaje
+            let texto = document.getElementById("texto").value;
+            let salida = document.getElementById("salida");
             let desencriptado = "";
 
-            if (salida.length != 0) {
-                desencriptado = salida
+            //sustuimos los valores para desencriptar
+            if (texto.length != 0) {
+                desencriptado = texto
                     .replace(/enter/gi, "e")
                     .replace(/imes/gi, "i")
                     .replace(/ai/gi, "a")
                     .replace(/ober/gi, "o")
                     .replace(/ufat/gi, "u");
 
-                texto.value = desencriptado;
-                alert(desencriptado);
+                //enviamos el resultado
+                salida.value = desencriptado;
+                //lo mostramos en el textarea correspondiente
+                document.getElementById("mensaje").style.display = 'none';
+                document.getElementById("encriptado").style.display = 'block';
             }
             else {
                 alert("Debes ingresar un texto");
             }
+        }
 
+        function portapapeles() {
+            let contenido = document.getElementById("salida");
+            contenido.select();
+            navigator.clipboard.writeText(contenido.value);
         }
 
 
